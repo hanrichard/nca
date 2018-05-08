@@ -1,0 +1,174 @@
+@import '~normalize.css';
+@import '~sass-rem';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.nca {
+	max-width: 700px;
+	margin: 50px auto;
+	border-top: 2px solid #a9a9a9;
+}
+
+.nca_header {
+	background: #224c7d;
+	margin: 2px 0 4px;
+
+	&-title {
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 16px;
+		line-height: 1;
+		font-family: "Arial";
+		font-weight: bold;
+		margin: 0;
+		padding: 10px;
+	}
+}
+
+.nca_body {
+	border: 1px solid #a9a9a9;
+	padding: 10px;
+}
+
+.nca_news {
+	@media (min-width: 992px) {
+
+		display: flex;
+	}
+
+	&-content {
+		&--breakingnews {
+			margin-bottom: 20px;
+
+			@media (min-width: 992px) {
+				width: 55%;
+				padding-right: 25px;
+				margin-bottom: 0;
+			}
+		}
+		&--mostpopularnews {
+			@media (min-width: 992px) {
+
+				width: 45%;
+			}
+		}
+	}
+	&-title {
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 15px;
+		font-family: "Arial";
+		font-weight: bold;
+		margin: 0 0 10px;
+
+		&--primary {
+			color: #c75457
+		}
+
+		&--secondary {
+			color: #249a31
+		}
+
+		&-arrow {
+
+    display: inline-block;
+    margin-left: 5px;
+			  width: 0; 
+			  height: 0; 
+			  border-top: 5px solid transparent;
+			  border-bottom: 5px solid transparent;
+			  
+			  border-left: 5px solid #c75457;
+			
+		}
+	}
+}
+
+.nca_style-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-item {
+		font-size: 13px;
+		line-height: 1;
+		padding: 6px 5px;
+
+		&:nth-child(odd) {
+			background: #e5e5e5;
+		}
+
+		&-time {
+			padding-right: 10px;
+			margin-right: 5px;
+			position: relative;
+			color: #6e6e6e;
+			text-transform: capitalize;
+
+			&:after {
+				color: #6e6e6e;
+				content: '|';
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+		}
+
+		&-copy {
+			color: #0373b3;
+		}
+	}
+}
+
+
+
+
+.nca_order-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-height: 250px;
+	overflow: hidden;
+	
+	&-item {
+		font-size: 13px;
+		line-height: 1;
+		padding: 6px 0;
+	   counter-increment: item;
+	   color: #413f40;
+	   padding-left: 40px;
+	   position: relative;
+	   overflow: hidden;
+	   text-overflow: ellipsis;
+		  overflow: hidden; 
+		  
+		  white-space: nowrap;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			position: absolute;
+			left: 0;
+			bottom: 4px;
+			color: #a1a1a1;
+			font-size: 21px;
+			font-family: "Georgia";
+			margin-right: 10px;
+
+			content: counter(item) '.' ;
+		}
+		&-link {
+			color: #413f40;
+		}
+	}
+}
+
+
+
+
+
+
+
+
